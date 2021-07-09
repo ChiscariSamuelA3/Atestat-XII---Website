@@ -1,0 +1,539 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(bkg.jpg);
+    height: 130vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+}
+
+.main-nav li
+{
+    display: inline-block;
+}
+
+.main-nav li a
+{
+    color: mediumblue;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15 px;
+}
+
+
+.main-nav li.active a
+{
+    border: 2px solid white;
+    
+}
+
+.main-nav li a:hover
+{
+    border: 2px solid white;
+    border-color: #00FA9A;
+    
+    
+}   
+.main-nav li
+{
+    float: left;
+    width: 220px;
+    height: 40px;
+    background-color: sandybrown;
+    opacity: .6;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    margin-right: 2px;
+}
+.main-nav li ul li
+{
+    display: none;
+}
+.main-nav li:hover ul li
+{
+    display: block;
+    background-color: #FFDEAD;
+    border: 1px solid white;
+    border-color: gold;
+}
+.logo img
+{
+    width: 180px;
+    height: auto;
+    float: left;
+    -webkit-transition: width 3s, height 2s, -webkit-transform 2s; /* Safari */
+  transition: width 2s, height 2s, transform 2s;
+}
+.logo img:hover
+{
+    width: 190px;
+    height: auto;
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);
+}
+body
+{
+    font-family: monospace;
+}
+
+.row
+{
+    max-width: 1200px;
+    margin: auto;
+    
+}
+
+.title
+{
+    position: absolute;
+    top: 67%;
+    left: 33%;
+    transform: translate(-50%,-50%);
+}
+.title h1
+{
+    color: #fff;
+    font-size: 40px;
+}
+
+.title p
+{
+    color: aquamarine;
+    font-size: 25px;
+}
+
+.txt
+{
+    position: absolute;
+    top: 73%;
+    left: 38%;
+    transform: translate(-50%,-50%);
+}
+.txt h
+{
+    color: limegreen;
+    font-size: 20px;
+}
+
+.txt p
+{
+    color: sandybrown;
+    font-size: 20px;
+}
+* {box-sizing: border-box}
+
+.container1 {
+  position: absolute;
+    top: 35%;
+    left: 3%;
+  width: 50%;
+  max-width: 300px;
+}
+.container2 {
+  position: absolute;
+    top: 35%;
+    left: 28%;
+  width: 50%;
+  max-width: 300px;
+}
+.container3 {
+  position: absolute;
+    top: 35%;
+    left: 53%;
+  width: 50%;
+  max-width: 300px;
+}
+.container4 {
+  position: absolute;
+    top: 85%;
+    left: 3%;
+  width: 50%;
+  max-width: 300px;
+}
+.container5 {
+  position: absolute;
+    top: 35%;
+    left: 78%;
+  width: 50%;
+  max-width: 300px;
+}
+.container6 {
+  position: absolute;
+    top: 85%;
+    left: 28%;
+  width: 50%;
+
+  max-width: 300px;
+}
+.container7 {
+  position: absolute;
+    top: 85%;
+    left: 53%;
+  width: 50%;
+
+  max-width: 300px;
+}
+.container8 {
+  position: absolute;
+    top: 85%;
+    left: 78%;
+  width: 50%;
+
+  max-width: 300px;
+}
+.pozitiereclama{
+    position: absolute;
+    top: 48%;
+    left: 35%;
+  width: 30%;
+  max-width: 370px;
+}
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container1:hover .overlay {
+  opacity: 1;
+}
+.container2:hover .overlay {
+  opacity: 1;
+}
+.container3:hover .overlay {
+  opacity: 1;
+}
+.container4:hover .overlay {
+  opacity: 1;
+}
+.container5:hover .overlay {
+  opacity: 1;
+}
+.container6:hover .overlay {
+  opacity: 1;
+}
+.container7:hover .overlay {
+  opacity: 1;
+}
+.container8:hover .overlay {
+  opacity: 1;
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover */
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: none;
+  perspective: 1000px; 
+     position: absolute;
+    top: 47%;
+    left: 3%;
+  
+}
+.flip-box1 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: none;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+     position: absolute;
+    top: 47%;
+    left: 35%;
+  
+}
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:active .flip-box-inner {
+  transform: rotateY(180deg);
+}
+.flip-box1:active .flip-box-inner {
+  transform: rotateY(180deg);
+}
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: coral;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.title1 p
+{
+    color: brown;
+    font-size: 15px;
+    font-family: cursive;
+}
+
+.title2
+{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    transform: translate(-50%,-50%);
+}
+.title2 h2
+{
+    color: #fff;
+    font-size: 22px;
+}
+
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);*/
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+	background: #666;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span
+{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links
+{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a
+{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name
+{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center
+{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i
+{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope
+{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p
+{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span
+{
+	display:block;
+	font-weight: normal;
+	font-size:16px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a
+{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before 
+{
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before 
+{
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right
+{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about
+{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span
+{
+	display: block;
+	color:  #ffffff;
+	font-size: 17px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+
+
+/* If you don't want the footer to be responsive, remove these media queries 
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}*/
+
+#grad
+{
+     height: 40px;
+     background-color: red; /* For browsers that do not support gradients */
+     background-image: linear-gradient(-90deg, red, yellow); /* Standard syntax (must be last) */
+}
+#grad1 {
+  height: 200px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
+}
